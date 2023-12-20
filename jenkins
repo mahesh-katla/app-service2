@@ -19,7 +19,7 @@ pipeline {
         stage('Build Docker image') {
             steps {
                 sh "chmod +x gradlew"
-                sh './gradlew docker'
+                sh './gradlew docker --debug'
             }
         }
         stage('Push Docker image') {
